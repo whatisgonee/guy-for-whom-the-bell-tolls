@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Guy For Whom The Bell Tolls</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Monomakh&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<style>
+			body {
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+				max-height: 100vh;
+				min-height: 100vh;
+			}
+
+			#navigation {
+				width: 100%;
+				height: 100px;
+				background-color: white;
+				
+				display: flex;
+				justify-content: center;
+				gap: 2em;
+			}
+
+			.name {
+				color: black;
+				font-size: 1.4em;
+				font-family: 'Monomakh', serif;
+				font-weight: bold;
+				margin-left: -10px;
+			}
+
+			.nav-link {
+				margin-top: 0px;
+				color: black;
+				height: 100px;
+				font-size: 1.6em;
+				line-height: 100px;
+				font-family: 'Montserrat', sans-serif;
+				cursor: pointer;
+				transition: 0.2s;
+			}
+
+			.nav-link:hover {
+				background-color: black;
+				color: white;
+			}
+
+			.nav-link:hover ~ .selected {
+				background-color: transparent;
+				color: black;
+			}
+
+			.selected {
+				height: 100%;
+				background-color: black;
+				color: white;
+			}
+
+			.screen {
+				position: relative;
+				width: 100%;
+				max-height: 100vh;
+				flex: 1 1 auto;
+				display: flex;
+				align-items: center;
+				overflow: hidden;
+				justify-content: space-around;
+			}
+
+			.container {
+				top: 0;
+				bottom: 0;
+				position: absolute;
+			}
+
+			.container img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.screen {
+					flex-direction: column;
+				}
+
+				.container {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav id="navigation">
+			<img class="logo" src="bell.png" height=100>
+			<p class="name">the guy for whom<br>the bell tolls</p>
+			<p class="nav-link">PRODUCTS</p>
+			<p class="nav-link">COMPANY</p>
+			<p class="nav-link">ABOUT US</p>
+			<p class="nav-link selected">CAREERS</p>
+		</nav>
+		<div class="screen">
+			<div style="left: 60px;" class="container">
+				<img src="man-pointing-front.png">
+			</div>
+			<h1 style="font-size: 8em">Thee!</h1>
+			<div style="transform: rotateY(180deg);right: 60px" class="container">
+				<img src="man-pointing-front.png">
+			</div>
+		</div>
+	</body>
+</html>
